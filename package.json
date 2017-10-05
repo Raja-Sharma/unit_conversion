@@ -1,0 +1,35 @@
+{
+  "name": "unit_conversion",
+  "version": "1.0.0",
+  "description": "react app for unit conversion",
+  "main": "index.js",
+  "scripts": {
+     "start": "webpack; webpack-dev-server --content-base dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raja-Sharma/unit_conversion.git"
+  },
+  "author": "Raja Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raja-Sharma/unit_conversion/issues"
+  },
+  "homepage": "https://github.com/Raja-Sharma/unit_conversion#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3"
+  }
+}
