@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { fetchRates } from '../actions'
 
-const Rates = (props) => {
-  return (
-    <h1>this is rates.js</h1>
-  )
+class Rates extends Component {
+
+  componentDidMount() {
+    this.props.fetchRates()
+  }
+
+  render() {
+    console.log(this.props);
+    return (
+      <h1>Rates</h1>
+    )
+  }
 }
 
-export default Rates
+function mapStateToProps(state) {
+  return {rates: state.rates}
+}
+
+export default connect(mapStateToProps, { fetchRates })(Rates)
