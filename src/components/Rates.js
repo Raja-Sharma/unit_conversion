@@ -8,10 +8,20 @@ class Rates extends Component {
     this.props.fetchRates()
   }
 
+  renderRates() {
+    return Object.keys(this.props.rates).map(k => {
+      return <li key={k}>{k}: {this.props.rates[k]}</li>
+    })
+  }
+
   render() {
-    console.log(this.props);
     return (
-      <h1>Rates</h1>
+      <div>
+        <h1>Rates</h1>
+        <ul>
+          {this.renderRates()}
+        </ul>
+      </div>
     )
   }
 }
