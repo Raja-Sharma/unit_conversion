@@ -12,7 +12,7 @@ class Rates extends Component {
 
   renderRates() {
     return Object.keys(this.props.rates).map(k => {
-      return <li key={k}>{k}: {this.props.rates[k]}</li>
+      return <li key={k}>{k}: {this.props.rates[k] * this.props.usdInput }</li>
     })
   }
 
@@ -50,7 +50,7 @@ class Rates extends Component {
 }
 
 function mapStateToProps(state) {
-  return { rates: state.rates.rates, usdInput: state.usdInput }
+  return { rates: state.rates.rates, usdInput: state.usd.usdInput }
 }
 
 function mapDispatchToProps(dispatch) {

@@ -1,4 +1,4 @@
-export default function(state={}, action) {
+export default function(state={usdInput:1}, action) {
   switch (action.type) {
     case "DOLLAR_INPUT":
       return Object.assign({}, state, {
