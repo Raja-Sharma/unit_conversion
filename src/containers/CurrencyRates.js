@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchRates, dollarInput } from '../actions'
 import { Field, reduxForm } from 'redux-form'
+import { Link } from 'react-router-dom'
 
-class Rates extends Component {
+class CurrencyRates extends Component {
 
   componentDidMount() {
     this.props.fetchRates()
@@ -12,7 +13,7 @@ class Rates extends Component {
 
   renderRates() {
     return Object.keys(this.props.rates).map(k => {
-      return <li key={k}>{k}: {this.props.rates[k] * this.props.usdInput }</li>
+      return <li key={k}>{k}: { (this.props.rates[k] * this.props.usdInput).toFixed(2) }</li>
     })
   }
 
@@ -26,10 +27,10 @@ class Rates extends Component {
     }
     return (
       <div>
-        <h1>Rates</h1>
+        <h1>Currency Conversion</h1>
         <form>
           <div>
-            <label>USD</label>
+            <label>USD base</label>
             <div>
               <Field
                 onKeyUp={this.handleUSDEntry.bind(this)}
@@ -44,6 +45,7 @@ class Rates extends Component {
         <ul>
           {this.renderRates()}
         </ul>
+        <Link to="/">back</Link>
       </div>
     )
   }
@@ -57,8 +59,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchRates: fetchRates, dollarInput: dollarInput }, dispatch)
 }
 
-Rates = connect(mapStateToProps, mapDispatchToProps)(Rates)
+CurrencyRates = connect(mapStateToProps, mapDispatchToProps)(CurrencyRates)
 
 export default reduxForm({
   form: 'usd'
-})(Rates)
+})(CurrencyRates)
