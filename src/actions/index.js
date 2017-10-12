@@ -10,3 +10,10 @@ export function fetchRates() {
     payload: Promise.resolve(request)
   }
 }
+
+export function dollarInput(amount) {
+  return {
+    type: "DOLLAR_INPUT",
+    payload: amount
+  }
+}

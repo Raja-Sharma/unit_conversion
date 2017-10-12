@@ -1,8 +1,8 @@
 export default function(state={}, action) {
   switch (action.type) {
-    case "FETCH_RATES":
+    case "DOLLAR_INPUT":
       return Object.assign({}, state, {
-        rates: action.payload.data.rates
+        usdInput: action.payload
       })
     default:
       return state
