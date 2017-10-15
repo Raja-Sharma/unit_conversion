@@ -27,24 +27,26 @@ class CurrencyRates extends Component {
     }
     return (
       <div>
-        <h1>Currency Conversion</h1>
-        <form>
-          <div>
-            <label>USD base</label>
+        <main>
+          <h1>Currency Conversion</h1>
+          <form>
             <div>
-              <Field
-                onKeyUp={this.handleUSDEntry.bind(this)}
-                name="amount"
-                component="input"
-                type="text"
-                placeholder="enter amount in USD"
-              />
+              <label>USD base</label>
+              <div>
+                <Field
+                  onKeyUp={this.handleUSDEntry.bind(this)}
+                  name="amount"
+                  component="input"
+                  type="text"
+                  placeholder="enter amount in USD"
+                />
+              </div>
             </div>
-          </div>
-        </form>
-        <ul>
-          {this.renderRates()}
-        </ul>
+          </form>
+          <ul>
+            {this.renderRates()}
+          </ul>
+        </main>
         <Link to="/">back</Link>
       </div>
     )

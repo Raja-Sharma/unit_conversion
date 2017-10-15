@@ -1,0 +1,16 @@
+body {
+  background-color: #2E4272;
+  color: #7887AB;
+}
+
+a {
+  color: #4F628E;
+}
+
+main {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
