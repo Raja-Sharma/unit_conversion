@@ -7,6 +7,8 @@ import CurrencyRates from './containers/CurrencyRates'
 import reducers from './reducers'
 import ReduxPromise from 'redux-promise'
 
+require("./css/application.css")
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 const store = applyMiddleware(ReduxPromise)(createStore)
