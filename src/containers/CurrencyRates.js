@@ -27,6 +27,9 @@ class CurrencyRates extends Component {
     }
     return (
       <div>
+        <video autoPlay loop id="video-background" muted>
+          <source src="https://www.videvo.net/videvo_files/converted/2017_10/videos/170115_Money_056.mp419545.mp4" type="video/mp4" />
+        </video>
         <main>
           <h1>Currency Conversion</h1>
           <form>
